@@ -8,6 +8,8 @@ import { IndexComponent } from './web/index/index.component';
 import { WebLayoutComponent } from './web/layout/web-layout.component';
 import { CategoryComponent } from './admin/category/category.component';
 import { CategoryDetailsComponent } from './admin/category/category-details/category-details.component';
+import { CustomerComponent } from './admin/customer/customer.component';
+import { CustomerDetailsComponent } from './admin/customer/customer-details/customer-details.component';
 
 const routes = [
   {
@@ -27,7 +29,10 @@ const routes = [
       { path: 'products/edit/:id', component: ProductDetailsComponent },
       { path: 'categories', component: CategoryComponent},
       { path: 'categories/add', component: CategoryDetailsComponent},
-      { path: 'categories/edit/:id', component: CategoryDetailsComponent}
+      { path: 'categories/edit/:id', component: CategoryDetailsComponent},
+      { path: 'customers', component: CustomerComponent},
+      { path: 'customers/add', component: CustomerDetailsComponent},
+      { path: 'customers/edit/:id', component: CustomerDetailsComponent}
     ]
   }
 ]
