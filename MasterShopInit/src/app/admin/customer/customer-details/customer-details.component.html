@@ -1,1 +1,22 @@
-<p>customer-details works!</p>
+<mat-card>
+    <mat-card-content>
+        <mat-form-field class="example-full-width">
+            <mat-label>FirstName</mat-label>
+            <input matInput [(ngModel)]="customer.firstName" placeholder="Jack">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>LastName</mat-label>
+            <input matInput [(ngModel)]="customer.lastName" placeholder="Jackson">
+        </mat-form-field>
+
+     <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="submit()">
+                <mat-icon>save</mat-icon>
+            </button>
+            <button mat-raised-button color="warn" (click)="closeAddCustomer()">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-card-actions>
+    </mat-card-content>       
+</mat-card>
