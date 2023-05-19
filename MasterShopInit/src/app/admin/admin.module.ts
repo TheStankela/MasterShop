@@ -16,6 +16,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { CategoryComponent } from "./category/category.component";
 import { CategoryDetailsComponent } from './category/category-details/category-details.component';
 import { CustomerComponent } from './customer/customer.component';
+import { CustomerDetailsComponent } from './customer/customer-details/customer-details.component';
 
 @NgModule({
     declarations: [
@@ -26,6 +27,7 @@ import { CustomerComponent } from './customer/customer.component';
         CategoryComponent,
         CategoryDetailsComponent,
         CustomerComponent,
+        CustomerDetailsComponent,
     ],
     imports: [
         FormsModule,
