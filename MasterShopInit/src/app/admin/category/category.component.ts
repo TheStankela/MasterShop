@@ -3,8 +3,7 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Category } from 'src/app/admin/models/category';
 import { CategoryService } from 'src/app/admin/services/category.service';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatTableDataSource} from '@angular/material/table';
+
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
