@@ -1,0 +1,22 @@
+<mat-card>
+    <mat-card-content>
+        <mat-form-field class="example-full-width">
+            <mat-label>Name</mat-label>
+            <input matInput [(ngModel)]="category.name" placeholder="Ex. Jewelry">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Icon</mat-label>
+            <input matInput [(ngModel)]="category.icon" placeholder="Icon URL">
+        </mat-form-field>
+
+     <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="submit()">
+                <mat-icon>save</mat-icon>
+            </button>
+            <button mat-raised-button color="warn" (click)="closeAddCategory()">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-card-actions>
+    </mat-card-content>       
+</mat-card>
