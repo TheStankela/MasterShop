@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Category } from 'src/app/admin/models/category';
+import { BrowserModule } from '@angular/platform-browser'
 import { CategoryService } from 'src/app/admin/services/category.service';
 
 @Component({
@@ -7,9 +9,11 @@ import { CategoryService } from 'src/app/admin/services/category.service';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
-
-  constructor(){}
+  categories: Category[] = [];
+  constructor(private categoryService: CategoryService){}
   ngOnInit(): void {
+    this.categoryService.getCategories().subscribe({next: c => this.categories = c});
   }
+
 
 }
