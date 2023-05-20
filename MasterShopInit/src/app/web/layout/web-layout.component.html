@@ -17,7 +17,9 @@
     <!-- Site Icons -->
     <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" integrity="sha512-YHuwZabI2zi0k7c9vtg8dK/63QB0hLvD4thw44dFo/TfBFVVQOqEG9WpviaEpbyvgOIYLXF1n7xDUfU3GDs0sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Site CSS -->
     <link rel="stylesheet" href="/assets/css/style.css">
     <!-- Responsive CSS -->
@@ -43,7 +45,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-
+                    
                 </div>
             </div>
         </div>
@@ -69,9 +71,9 @@
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ms-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item active">
-                            <a class="nav-link">Index</a>
+                            <a class="nav-link" routerLink="/">Index</a>
                         </li>
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" routerLink="/products">Products</a>
                         </li>
                         <li class="nav-item">
@@ -81,7 +83,49 @@
                             <a class="nav-link" routerLink="/contact">Contact</a>
                         </li>
                     </ul>
+                    
                 </div>
+                <button mat-icon-button [matMenuTriggerFor]="menu" class="btn btn-outline-warning">
+                    <mat-icon>shopping_cart</mat-icon>
+                </button>
+                  <mat-menu #menu="matMenu">
+                    <div class="p-3 divide-y divide-solid">
+                        <div class="pb-3 flex justify-between">
+                            <span class="mr-5">3 items</span>
+                            <a routerLink="/cart">View Cart</a>
+                        </div>
+                        <div class="py-3">
+                            <div class="flex justify-between  font-weight-light mb-2 ">
+                                Keyboard x 1
+                                <span class="font-weight-bold">{{'150' | currency}}</span>
+                            </div>
+                        </div>
+                        <div class="py-3">
+                            <div class="flex justify-between  font-weight-light mb-2">
+                                Keyboard x 1
+                                <span class="font-weight-bold">{{'150' | currency}}</span>
+                            </div>
+                        </div>
+                        <div class="py-3">
+                            <div class="flex justify-between  font-weight-light mb-2">
+                                Keyboard x 1
+                                <span class="font-weight-bold">{{'150' | currency}}</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-content-between py-3 font-weight-light">
+                            Total:
+                            <span class="font-weight-bold">{{450 | currency}}</span>
+                        </div>
+                        <div class="pt-3 flex justify-content-between">
+                            <button class="bg-danger text-white rounded-circle">
+                                <mat-icon>remove_shopping_cart</mat-icon>
+                            </button>
+                            <button class="bg-success text-white rounded-circle float-right">
+                                <mat-icon>shopping_cart</mat-icon>
+                            </button>
+                        </div>
+                    </div>
+                  </mat-menu>
                 <!-- /.navbar-collapse -->
             </div>
             <!-- Start Side Menu -->
