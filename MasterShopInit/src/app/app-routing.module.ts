@@ -10,6 +10,7 @@ import { CategoryComponent } from './admin/category/category.component';
 import { CategoryDetailsComponent } from './admin/category/category-details/category-details.component';
 import { CustomerComponent } from './admin/customer/customer.component';
 import { CustomerDetailsComponent } from './admin/customer/customer-details/customer-details.component';
+import { CartComponent } from './web/cart/cart.component';
 
 const routes = [
   {
@@ -17,6 +18,7 @@ const routes = [
     component: WebLayoutComponent,
     children: [
       { path: '', component: IndexComponent },
+      { path: 'cart', component: CartComponent},
     ]
   },
   {
